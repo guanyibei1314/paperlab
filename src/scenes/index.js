@@ -1,0 +1,10 @@
+import * as l1 from './l1.js';
+import * as l2 from './l2.js';
+import * as l3 from './l3.js';
+import * as l4 from './l4.js';
+import * as l5 from './l5.js';
+import * as l6 from './l6.js';
+import * as l7 from './l7.js';
+import * as l8 from './l8.js';
+import * as end from './end.js';
+export const SCENES = { l1, l2, l3, l4, l5, l6, l7, l8: Object.assign({}, l8, { opt: '0.7' }), end };

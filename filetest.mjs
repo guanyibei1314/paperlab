@@ -1,0 +1,14 @@
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const { chromium } = require('playwright');
+const browser = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
+const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+const errs = [];
+page.on('pageerror', e => errs.push(e.message)); page.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
+await page.goto('file:///home/claude/book/site/index.html#l4');
+await page.waitForFunction(() => document.getElementById('loading').hidden, null, { timeout: 60000 });
+await page.evaluate(() => { __app.goStep(3); __app.simulate(3); });
+await page.screenshot({ path: '/tmp/claude-0/-home-claude/3d713a20-13cc-58d2-917c-aa9ca1b132f0/scratchpad/shots/file_l4.png' });
+console.log('file:// ok, spread', await page.evaluate(() => __app.currentSpread().id), 'fonts', await page.evaluate(() => document.fonts.check('400 30px "Noto Serif SC"', '运动')));
+console.log(errs.slice(0, 5).join('\n') || 'no errors');
+await browser.close();

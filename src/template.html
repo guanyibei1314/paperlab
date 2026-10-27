@@ -1,0 +1,53 @@
+<title>运动的理由</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="纸上实验室·物理第一册：一本关于力与运动的立体物理书，八个可以动手的实验带你读懂牛顿三大定律。">
+<style>/*__FONTS__*/</style>
+<style>/*__CSS__*/</style>
+<div id="app">
+  <canvas id="gl" aria-label="立体书与实验场景"></canvas>
+
+  <div id="loading" role="status">
+    <div class="ld-card">
+      <div class="ld-kicker">纸上实验室 · 物理 · 第一册</div>
+      <div class="ld-title">运动的理由</div>
+      <div class="ld-bar"><i></i></div>
+      <div class="ld-msg" id="ldmsg">正在铺开书桌……</div>
+    </div>
+  </div>
+
+  <div id="hint" class="hint" hidden></div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <div id="dock">
+    <div id="controls" class="controls" hidden></div>
+    <nav id="toolbar" aria-label="导览">
+      <button class="tb" id="bMenu" aria-label="目录" title="目录"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+      <button class="tb" id="bPrev" aria-label="上一步" title="上一步"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="tb" id="bPlay" aria-label="自动播放" title="自动播放"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5.5v13l10-6.5z" class="fill"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M8 5v14M16 5v14"/></svg></button>
+      <div class="cap" id="cap" aria-live="polite"><span class="capn" id="capn"></span><span id="capt"></span></div>
+      <div class="dots" id="dots" aria-hidden="true"></div>
+      <button class="tb" id="bNext" aria-label="下一步" title="下一步"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+      <span class="sep"></span>
+      <button class="tb" id="bText" aria-label="课文" title="课文（大字版）"><svg viewBox="0 0 24 24"><path d="M4 5.5c3-1 5.5-.8 8 1 2.5-1.8 5-2 8-1v13c-3-1-5.5-.8-8 1-2.5-1.8-5-2-8-1z"/><path d="M12 6.5v13"/></svg></button>
+      <button class="tb" id="bSound" aria-label="声音" title="声音"><svg viewBox="0 0 24 24" class="i-on"><path d="M4 9.5h3.5L12 6v12l-4.5-3.5H4z" class="fill"/><path d="M15.5 9a4 4 0 010 6M18 6.5a7.5 7.5 0 010 11"/></svg><svg viewBox="0 0 24 24" class="i-off"><path d="M4 9.5h3.5L12 6v12l-4.5-3.5H4z" class="fill"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg></button>
+      <button class="tb" id="bTheme" aria-label="白天/夜晚" title="白天 / 夜晚"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M12 4.5a7.5 7.5 0 000 15z" class="fill"/></svg></button>
+      <button class="tb" id="bTeacher" aria-label="教师笔记" title="教师笔记"><svg viewBox="0 0 24 24"><path d="M2.5 9.5L12 5l9.5 4.5L12 14z"/><path d="M6.5 11.5v4.2c3.3 2.2 7.7 2.2 11 0v-4.2M21.5 9.5v5"/></svg></button>
+    </nav>
+  </div>
+
+  <aside id="sheet" class="sheet" aria-label="课文" hidden>
+    <div class="sheet-head"><span id="sheetTitle">课文</span><button class="x" data-close="sheet" aria-label="关闭">×</button></div>
+    <div class="sheet-body" id="sheetBody"></div>
+  </aside>
+
+  <div id="panel" class="panel-wrap" hidden>
+    <div class="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle">
+      <div class="panel-head"><h2 id="panelTitle"></h2><button class="x" data-close="panel" aria-label="关闭">×</button></div>
+      <div class="panel-body" id="panelBody"></div>
+    </div>
+  </div>
+
+  <div id="sr" class="sr-only" aria-live="polite"></div>
+</div>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<script type="module">/*__JS__*/</script>

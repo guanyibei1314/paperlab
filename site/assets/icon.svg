@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#2f4470"/>
+  <path d="M96 150c54-22 106-20 160 10v236c-54-30-106-32-160-10z" fill="#f6f4ee" stroke="#1d2540" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M416 150c-54-22-106-20-160 10v236c54-30 106-32 160-10z" fill="#f6f4ee" stroke="#1d2540" stroke-width="10" stroke-linejoin="round"/>
+  <g stroke="#9d97a3" stroke-width="7" stroke-linecap="round">
+    <path d="M128 196c32-10 64-8 96 6M128 236c32-10 64-8 96 6M128 276c32-10 64-8 96 6"/>
+  </g>
+  <rect x="300" y="226" width="78" height="66" fill="#fbfaf6" stroke="#2f2c36" stroke-width="8"/>
+  <path d="M262 246h22v-16l34 29-34 29v-16h-22z" fill="#ff7a1a" stroke="#2f2c36" stroke-width="6" stroke-linejoin="round" transform="translate(-36 0)"/>
+  <rect x="356" y="96" width="70" height="70" rx="8" fill="#c0392b" transform="rotate(-8 391 131)"/>
+  <text x="391" y="146" font-family="serif" font-size="44" font-weight="900" fill="#fff" text-anchor="middle" transform="rotate(-8 391 131)">力</text>
+</svg>

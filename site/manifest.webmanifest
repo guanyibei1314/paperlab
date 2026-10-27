@@ -1,0 +1,28 @@
+{
+  "name": "运动的理由 · 纸上实验室",
+  "short_name": "纸上实验室",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#d8d1c4",
+  "theme_color": "#2f4470",
+  "description": "一本摊在书桌上的 3D 立体物理书：8 个可以亲手做的实验，读懂牛顿三大定律。对应人教版八年级下册《运动和力》与高中物理必修第一册。",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

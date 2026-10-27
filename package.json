@@ -1,0 +1,23 @@
+{
+  "name": "paperlab-physics",
+  "version": "1.0.0",
+  "description": "纸上实验室·物理第一册《运动的理由》：3D 立体物理书，8 个可以动手的牛顿定律实验",
+  "scripts": {
+    "fonts": "python3 fonts.py --files site/assets/fonts",
+    "build": "python3 fonts.py --files site/assets/fonts && node build-site.mjs && node icons.mjs",
+    "preview": "cd site && python3 -m http.server 8080",
+    "artifact": "python3 fonts.py && node build.mjs --min"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@fontsource/caveat": "^5.3.0",
+    "@fontsource/eb-garamond": "^5.3.0",
+    "@fontsource/long-cang": "^5.3.0",
+    "@fontsource/noto-serif-sc": "^5.3.1",
+    "esbuild": "^0.24.0",
+    "three": "^0.170.0"
+  },
+  "private": true,
+  "type": "module"
+}
