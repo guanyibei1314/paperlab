@@ -1,6 +1,11 @@
 name = "paperlab"
 compatibility_date = "2026-10-30"
 workers_dev = true
+preview_urls = false
 
 [assets]
 directory = "./site"
+
+[observability]
+enabled = true
+head_sampling_rate = 1.0
