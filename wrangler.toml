@@ -9,3 +9,7 @@ directory = "./site"
 [observability]
 enabled = true
 head_sampling_rate = 1.0
+redact_query_string = true
+
+[observability.issues]
+enabled = true
