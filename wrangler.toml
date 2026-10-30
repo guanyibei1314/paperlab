@@ -1,0 +1,6 @@
+name = "paperlab"
+compatibility_date = "2026-10-30"
+workers_dev = true
+
+[assets]
+directory = "./site"
